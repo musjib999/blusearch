@@ -95,7 +95,7 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                       ),
                       SizedBox(height: 6.h),
                       PrimaryButton(
-                        title: 'LOGIN',
+                        title: 'SIGN UP',
                         controller: loginBtn,
                         onTap: () async {
                           if (_formKey.currentState!.validate()) {

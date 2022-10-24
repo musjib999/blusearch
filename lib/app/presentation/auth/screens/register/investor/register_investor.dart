@@ -113,11 +113,12 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                       ),
                       SizedBox(height: 6.h),
                       PrimaryButton(
-                        title: 'LOGIN',
+                        title: 'SIGN UP',
                         controller: loginBtn,
                         onTap: () async {
                           if (_formKey.currentState!.validate()) {
                             loginBtn.stop();
+                            Navigator.push(context, OtpVerification.route(email: email.text));
                           } else {
                             loginBtn.stop();
                           }
@@ -141,7 +142,8 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
                                     color: AppColors.primaryColor),
-                              )),
+                              ),
+                          ),
                         ],
                       ),
                       SizedBox(height: 20.sp),

@@ -3,8 +3,8 @@ import 'package:blusearch/app/index.dart';
 class Login extends StatefulWidget {
   const Login({Key? key}) : super(key: key);
   static Route route() => MaterialPageRoute(
-        builder: (_) => const Login(),
-      );
+    builder: (_) => const Login(),
+  );
 
   @override
   State<Login> createState() => _LoginState();
@@ -19,26 +19,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: SizedBox(
-          height: 5.h,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.login, color: AppColors.white,),
-              const VerticalDivider(color: AppColors.white,),
-              Text('LOGIN', style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700),),
-            ],
-          ),
-        ),
-        toolbarHeight: MediaQuery.of(context).size.height / 4,
-        backgroundColor: AppColors.primaryColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(
-            bottom: Radius.elliptical(100.w, 56.0),
-          ),
-        ),
-      ),
+      appBar: authAppBar(context: context, title: 'LOGIN', icon: Icons.login),
       body: SingleChildScrollView(
         child: SafeArea(
           child: Container(
@@ -64,6 +45,7 @@ class _LoginState extends State<Login> {
                       ),
                       const SizedBox(height: 20),
                       AuthTextField(
+                        obscureText: true,
                         controller: password,
                         hintText: 'Password',
                         validator: (value) {
@@ -106,7 +88,7 @@ class _LoginState extends State<Login> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text('Don\'t have an account?', style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w400),),
-                          Text('Sign Up', style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.primaryColor),),
+                          GestureDetector(onTap: () => Navigator.push(context, RegisterUserType.route()), child: Text('Sign Up', style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.primaryColor),)),
                         ],
                       ),
                       SizedBox(height: 18.h),

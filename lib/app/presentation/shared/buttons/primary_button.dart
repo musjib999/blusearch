@@ -33,3 +33,38 @@ class PrimaryButton extends StatelessWidget {
     );
   }
 }
+
+class PrimaryButton2 extends StatelessWidget {
+  final String title;
+  final double? width;
+
+  final void Function()? onTap;
+  final Color? color;
+  const PrimaryButton2(
+      {Key? key,
+        required this.title,
+        required this.onTap,
+        this.width,
+        this.color = AppColors.primaryColor})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        height: 45,
+        width: width ?? 200,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(21.5),
+          color: color,
+        ),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w700),
+          ),
+        ),
+      ),
+    );
+  }
+}

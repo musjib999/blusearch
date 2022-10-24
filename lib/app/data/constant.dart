@@ -13,6 +13,16 @@ extension SnackBarStatusX on SnackBarStatus{
   bool get isError => this == SnackBarStatus.error;
 }
 
+enum UserType{
+  investor, business
+}
+
+extension UserTypeX on UserType{
+  bool get isInvestor => this == UserType.investor;
+  bool get isBusiness => this == UserType.business;
+}
+
+
 List<Widget> menu = [
   Container(),
   Container(),

@@ -73,7 +73,9 @@ class _OtpVerificationState extends State<OtpVerification> {
                   SizedBox(height: 30.sp),
                   PrimaryButton2(
                     title: 'VERIFY',
-                    onTap: () async {},
+                    onTap: () async {
+                      Navigator.pushReplacement(context, VerifiedScreen.route());
+                    },
                   ),
                   SizedBox(height: 20.sp),
                   Center(
@@ -94,7 +96,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                     AppAsset.appLogo,
                     width: 30.w,
                     height: 42,
-                  )
+                  ),
                 ],
               )
             ],

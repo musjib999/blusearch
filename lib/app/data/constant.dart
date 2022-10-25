@@ -3,6 +3,7 @@ import 'package:blusearch/app/configs/configs.dart';
 class AppAsset{
   static const String appLogo = 'assets/images/logo.png';
   static const String welcomeSvg = 'assets/svg/welcome.svg';
+  static const String business1 = 'assets/images/business1.png';
 }
 
 enum SnackBarStatus{
@@ -30,4 +31,8 @@ List<Widget> menu = [
   Container(),
   Container(),
   Container()
+];
+
+List<String> investmentCategories  = [
+  'Fixed Income', 'Real Estate', 'Agriculture', 'Transportation'
 ];

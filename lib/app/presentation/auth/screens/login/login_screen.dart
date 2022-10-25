@@ -78,6 +78,7 @@ class _LoginState extends State<Login> {
                         onTap: () async {
                           if (_formKey.currentState!.validate()) {
                             loginBtn.stop();
+                            Navigator.pushReplacement(context, HomeBottomNavigation.route(screens: investorMenu),);
                           } else {
                             loginBtn.stop();
                           }

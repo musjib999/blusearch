@@ -10,4 +10,10 @@ final appTheme = ThemeData(
       GoogleFonts.montserrat(fontSize: 12),
     ),
   ),
+  scaffoldBackgroundColor: AppColors.bgColor,
+  appBarTheme: AppBarTheme(
+    elevation: 0,
+    backgroundColor: AppColors.bgColor,
+    titleTextStyle: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w700, color: AppColors.black),
+  ),
 );

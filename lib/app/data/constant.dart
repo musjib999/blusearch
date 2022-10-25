@@ -2,6 +2,7 @@ import 'package:blusearch/app/configs/configs.dart';
 
 class AppAsset{
   static const String appLogo = 'assets/images/logo.png';
+  static const String welcomeSvg = 'assets/svg/welcome.svg';
 }
 
 enum SnackBarStatus{

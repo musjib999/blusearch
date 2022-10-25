@@ -100,6 +100,7 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                         onTap: () async {
                           if (_formKey.currentState!.validate()) {
                             loginBtn.stop();
+                            Navigator.push(context, OtpVerification.route(email: email.text));
                           } else {
                             loginBtn.stop();
                           }
@@ -122,7 +123,8 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                                 style: GoogleFonts.montserrat(
                                     fontSize: 14,
                                     fontWeight: FontWeight.w600,
-                                    color: AppColors.primaryColor),
+                                    color: AppColors.primaryColor,
+                                ),
                               ),
                           ),
                         ],

@@ -13,7 +13,7 @@ PreferredSizeWidget authAppBar({required BuildContext context, required String t
         children: [
           Icon(icon, color: AppColors.white,),
           const VerticalDivider(color: AppColors.white,),
-          Text(title, style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700),),
+          Text(title, style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700, color: AppColors.white),),
         ],
       ),
     ),

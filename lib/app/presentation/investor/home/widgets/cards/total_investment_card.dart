@@ -30,7 +30,7 @@ class TotalInvestmentCard extends StatelessWidget {
           ),
           SizedBox(height: 10.sp),
           Text(
-            amount.toString(),
+            'N${numberFormatter(amount)}',
             style: GoogleFonts.montserrat(
                 fontSize: 24,
                 fontWeight: FontWeight.w600,

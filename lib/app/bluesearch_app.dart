@@ -5,12 +5,14 @@ class BlusearchApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
-      return MaterialApp(
-        title: 'Blusearch',
-        theme: appTheme,
-        home: const SplashScreen(),
-      );
-    });
+    return Sizer(
+      builder: (context, orientation, deviceType) {
+        return MaterialApp(
+          title: 'Blusearch',
+          theme: appTheme,
+          home: const SplashScreen(),
+        );
+      },
+    );
   }
 }

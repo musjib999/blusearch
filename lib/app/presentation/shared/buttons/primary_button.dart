@@ -21,7 +21,7 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return RoundedLoadingButton(
       controller: controller,
-      height: 45,
+      height: 43,
       width: width ?? 200,
       borderRadius: 21.5,
       color: color,
@@ -52,7 +52,7 @@ class PrimaryButton2 extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        height: 45,
+        height: 43,
         width: width ?? 200,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(21.5),

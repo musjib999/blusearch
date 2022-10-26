@@ -35,7 +35,7 @@ class SingleInvestmentSuggestion extends StatelessWidget {
                       SizedBox(width: 50.w, child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(investment.busniessName.toUpperCase(), style: GoogleFonts.montserrat(fontSize: 19, fontWeight: FontWeight.w600,),),
+                          Text(investment.busniessName, style: GoogleFonts.montserrat(fontSize: 19, fontWeight: FontWeight.w600,),),
                           Text('15% returns in 6 months', style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w500),),
                         ],
                       ),

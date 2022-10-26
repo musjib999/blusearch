@@ -10,6 +10,7 @@ class InvestmentModel {
     required this.profit,
     required this.image,
     required this.units,
+    this.maturityDate,
   });
 
   final String busniessName;
@@ -20,6 +21,7 @@ class InvestmentModel {
   final String profit;
   final String image;
   final int units;
+  final DateTime? maturityDate;
 
   factory InvestmentModel.fromRawJson(String str) => InvestmentModel.fromJson(json.decode(str));
 
@@ -34,6 +36,7 @@ class InvestmentModel {
     profit: json["profit"],
     image: json["image"],
     units: json["units"],
+    maturityDate: json["maturityDate"] ?? DateTime.now(),
   );
 
   Map<String, dynamic> toJson() => {
@@ -45,5 +48,6 @@ class InvestmentModel {
     "profit": profit,
     "image": image,
     "units": units,
+    "maturityDate": maturityDate ?? DateTime.now(),
   };
 }

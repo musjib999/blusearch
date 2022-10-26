@@ -1,5 +1,4 @@
 import 'package:blusearch/app/index.dart';
-import 'package:blusearch/app/presentation/investor/investment/screens/investments_screen.dart';
 
 
 class HomeBottomNavigation extends StatefulWidget {

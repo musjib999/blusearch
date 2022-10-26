@@ -1,7 +1,11 @@
 import 'package:blusearch/app/index.dart';
 
 class InvestmentSuggestionCard extends StatelessWidget {
-  const InvestmentSuggestionCard({Key? key}) : super(key: key);
+  final String businessName;
+  final String image;
+  final double amount;
+  final int investors;
+  const InvestmentSuggestionCard({Key? key, required this.businessName, required this.image, required this.amount, required this.investors}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +22,7 @@ class InvestmentSuggestionCard extends StatelessWidget {
               topRight: Radius.circular(20),
             ),
             child: Image.asset(
-              AppAsset.business1,
+              image,
               height: 13.h,
               width: 100.w,
               fit: BoxFit.fill,
@@ -29,21 +33,31 @@ class InvestmentSuggestionCard extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Faidu Cakes ‘N’ Delicacies', style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w600),),
-                Text('15% returns in 6 months', style: GoogleFonts.montserrat(fontSize: 8, fontWeight: FontWeight.w500),),
+                SizedBox(
+                  height: 6.h,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(businessName, style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w600),),
+                      Text('15% returns in 6 months', style: GoogleFonts.montserrat(fontSize: 8, fontWeight: FontWeight.w500),),
+                    ],
+                  ),
+                ),
                 SizedBox(height: 10.sp),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('N1000', style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w600),),
+                        Text('N$amount', style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w600),),
                         Text('per unit', style: GoogleFonts.montserrat(fontSize: 8, fontWeight: FontWeight.w500),)
                       ],
                     ),
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('123', style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w600),),
+                        Text('$investors', style: GoogleFonts.montserrat(fontSize: 12, fontWeight: FontWeight.w600),),
                         Text('investors', style: GoogleFonts.montserrat(fontSize: 8, fontWeight: FontWeight.w500),)
                       ],
                     ),

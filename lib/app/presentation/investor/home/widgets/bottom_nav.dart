@@ -1,4 +1,6 @@
 import 'package:blusearch/app/index.dart';
+import 'package:blusearch/app/presentation/investor/investment/screens/investments_screen.dart';
+
 
 class HomeBottomNavigation extends StatefulWidget {
   final List<Widget> screens;
@@ -61,7 +63,7 @@ class HomeBottomNavigationState extends State<HomeBottomNavigation> {
 
 List<Widget> investorMenu = [
   const Home(),
-  Container(),
-  Container(),
+  const Investments(),
+  const Chat(),
   Container(),
 ];

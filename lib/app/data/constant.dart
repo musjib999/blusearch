@@ -5,6 +5,7 @@ class AppAsset{
   static const String welcomeSvg = 'assets/svg/welcome.svg';
   static const String business1 = 'assets/images/business1.png';
   static const String business2 = 'assets/images/business2.png';
+  static const String noDataSvg = 'assets/svg/no_data.svg';
 }
 
 enum SnackBarStatus{

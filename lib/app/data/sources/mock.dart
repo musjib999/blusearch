@@ -120,4 +120,55 @@ class MockData {
         profilePic: AppAsset.business1,
         name: 'Faidu Cakes ‘N’ Delicacies'),
   ];
+
+  static List<MessageModel> messages = [
+    MessageModel(
+        message:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi non id auctor velit nullam purus. ',
+        date: DateTime.now(),
+        sender: 'Faidu Cakes ‘N’ Delicacies',
+        sent: false,
+    ),
+    MessageModel(
+      message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi non id auctor velit nullam purus. ',
+      date: DateTime.now(),
+      sender: 'Faidu Cakes ‘N’ Delicacies',
+      sent: false,
+    ),
+    MessageModel(
+      message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi non id auctor velit nullam purus. ',
+      date: DateTime.now(),
+      sender: 'Faidu Cakes ‘N’ Delicacies',
+      sent: true,
+    ),
+    MessageModel(
+      message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi non id auctor velit nullam purus. ',
+      date: DateTime.now(),
+      sender: 'Faidu Cakes ‘N’ Delicacies',
+      sent: false,
+    ),
+    MessageModel(
+      message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi non id auctor velit nullam purus. ',
+      date: DateTime.now(),
+      sender: 'Faidu Cakes ‘N’ Delicacies',
+      sent: true,
+    ), MessageModel(
+      message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi non id auctor velit nullam purus. ',
+      date: DateTime.now(),
+      sender: 'Faidu Cakes ‘N’ Delicacies',
+      sent: false,
+    ),
+    MessageModel(
+      message:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi non id auctor velit nullam purus. ',
+      date: DateTime.now(),
+      sender: 'Faidu Cakes ‘N’ Delicacies',
+      sent: true,
+    ),
+  ];
 }

@@ -50,6 +50,7 @@ class _ChatState extends State<Chat> {
               )
             : ListView.separated(
                 itemBuilder: (context, index) => ListTile(
+                  onTap: () => Navigator.push(context, Message.route(name: MockData.chats[index].name,messages: MockData.messages),),
                   leading: CircleAvatar(
                     backgroundImage:
                         AssetImage(MockData.chats[index].profilePic),

@@ -14,4 +14,6 @@ class AppColors {
   static const Color orange = Color(0xffFBA429);
   static const Color inputGrey = Color(0xff787878);
   static const Color lightGrey = Color(0xffD9D9D9);
+  static const Color faintBlue = Color(0xffD9E0FF);
+  static const Color faintGrey = Color(0xffF5F5F5);
 }

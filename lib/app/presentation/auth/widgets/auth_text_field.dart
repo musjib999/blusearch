@@ -5,8 +5,9 @@ class AppTextField extends StatelessWidget {
   final String hintText;
   final bool? obscureText;
   final double? width;
+  final bool? enabled;
   final String? Function(String?)? validator;
-  const AppTextField({Key? key, required this.controller, required this.hintText, this.obscureText, this.validator, this.width}) : super(key: key);
+  const AppTextField({Key? key, required this.controller, required this.hintText, this.obscureText, this.validator, this.width, this.enabled = true}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +17,7 @@ class AppTextField extends StatelessWidget {
         validator: validator,
         controller: controller,
         obscureText: obscureText ?? false,
+        enabled: enabled,
         decoration: InputDecoration(
           labelText: hintText,
         ),

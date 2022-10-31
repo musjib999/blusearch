@@ -60,7 +60,7 @@ class PrimaryButton2 extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            title,
+            title.toUpperCase(),
             style: const TextStyle(color: Colors.white, fontSize: 14, fontWeight: FontWeight.w700),
           ),
         ),

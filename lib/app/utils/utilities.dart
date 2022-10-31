@@ -1,6 +1,5 @@
-import 'package:blusearch/app/configs/configs.dart';
-import 'package:blusearch/app/data/constant.dart';
-import 'package:blusearch/app/utils/themes/themes.dart';
+import 'package:blusearch/app/index.dart';
+
 
 void showSnacbar(
     {required BuildContext context,

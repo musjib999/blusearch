@@ -2,8 +2,8 @@ import 'package:blusearch/app/index.dart';
 
 class PersonalInformation extends StatefulWidget {
   static Route route() => MaterialPageRoute(
-    builder: (_) => const PersonalInformation(),
-  );
+        builder: (_) => const PersonalInformation(),
+      );
   const PersonalInformation({Key? key}) : super(key: key);
 
   @override
@@ -17,7 +17,7 @@ class _PersonalInformationState extends State<PersonalInformation> {
   TextEditingController email = TextEditingController();
   TextEditingController address = TextEditingController();
   RoundedLoadingButtonController saveBtn = RoundedLoadingButtonController();
-
+  bool enableTextFields = false;
   @override
   void initState() {
     super.initState();
@@ -35,6 +35,16 @@ class _PersonalInformationState extends State<PersonalInformation> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Personal Information'),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.edit),
+            onPressed: () {
+              setState(() {
+                enableTextFields = true;
+              });
+            },
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -42,17 +52,42 @@ class _PersonalInformationState extends State<PersonalInformation> {
           child: Column(
             children: [
               SizedBox(height: 8.sp),
-              AppTextField(controller: fName, hintText: 'First Name'),
+              AppTextField(
+                controller: fName,
+                hintText: 'First Name',
+                enabled: enableTextFields,
+              ),
               SizedBox(height: 8.sp),
-              AppTextField(controller: fName, hintText: 'Last Name'),
+              AppTextField(
+                controller: fName,
+                hintText: 'Last Name',
+                enabled: enableTextFields,
+              ),
               SizedBox(height: 8.sp),
-              AppTextField(controller: email, hintText: 'Email Address'),
+              AppTextField(
+                controller: email,
+                hintText: 'Email Address',
+                enabled: false,
+              ),
               SizedBox(height: 8.sp),
-              AppTextField(controller: phone, hintText: 'Phone Number'),
+              AppTextField(
+                controller: phone,
+                hintText: 'Phone Number',
+                enabled: enableTextFields,
+              ),
               SizedBox(height: 8.sp),
-              AppTextField(controller: address, hintText: 'Home Address'),
+              AppTextField(
+                controller: address,
+                hintText: 'Home Address',
+                enabled: enableTextFields,
+              ),
               SizedBox(height: 40.sp),
-              PrimaryButton(controller: saveBtn, title: 'SAVE CHANGES', onTap: (){},),
+              PrimaryButton(
+                controller: saveBtn,
+                title: 'SAVE CHANGES',
+                onTap:  enableTextFields == false ? null : () {saveBtn.stop();},
+                color: enableTextFields == false ? AppColors.inputGrey: AppColors.primaryColor,
+              ),
             ],
           ),
         ),

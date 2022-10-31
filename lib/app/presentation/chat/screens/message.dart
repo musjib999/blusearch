@@ -39,7 +39,9 @@ class _MessageState extends State<Message> {
                 itemBuilder: (context, index) => MessageBubble(
                     sender: widget.messages![index].sender,
                     text: widget.messages![index].message,
-                    isMe: widget.messages![index].sent),
+                    isMe: widget.messages![index].sent,
+                  date: DateTime.now(),
+                ),
                 itemCount: widget.messages!.length,
               ),
             ),

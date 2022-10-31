@@ -64,5 +64,5 @@ List<Widget> investorMenu = [
   const Home(),
   const Investments(),
   const Chat(),
-  Container(),
+  const Account(),
 ];

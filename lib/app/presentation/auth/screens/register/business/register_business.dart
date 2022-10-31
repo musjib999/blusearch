@@ -37,7 +37,7 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                   SizedBox(height: 10.sp),
                   Column(
                     children: [
-                      AuthTextField(
+                      AppTextField(
                         controller: name,
                         hintText: 'Business Name',
                         validator: (value) {
@@ -48,7 +48,7 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                         },
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         controller: email,
                         hintText: 'Email Address',
                         validator: (value) {
@@ -59,7 +59,7 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                         },
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         controller: phone,
                         hintText: 'Phone Number',
                         validator: (value) {
@@ -70,7 +70,7 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                         },
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         obscureText: true,
                         controller: password,
                         hintText: 'Password',
@@ -82,7 +82,7 @@ class _RegisterBusinessState extends State<RegisterBusiness> {
                         },
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         obscureText: true,
                         controller: cPassword,
                         hintText: 'Confirm Password',

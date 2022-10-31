@@ -41,7 +41,7 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          AuthTextField(
+                          AppTextField(
                             width: 43.w,
                             controller: fName,
                             hintText: 'First Name',
@@ -52,7 +52,7 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                               return null;
                             },
                           ),
-                          AuthTextField(
+                          AppTextField(
                             width: 43.w,
                             controller: lName,
                             hintText: 'Last Name',
@@ -66,7 +66,7 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                         ],
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         controller: email,
                         hintText: 'Email Address',
                         validator: (value) {
@@ -77,7 +77,7 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                         },
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         controller: phone,
                         hintText: 'Phone Number',
                         validator: (value) {
@@ -88,7 +88,7 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                         },
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         obscureText: true,
                         controller: password,
                         hintText: 'Password',
@@ -100,7 +100,7 @@ class _RegisterInvestorState extends State<RegisterInvestor> {
                         },
                       ),
                       const SizedBox(height: 15),
-                      AuthTextField(
+                      AppTextField(
                         obscureText: true,
                         controller: cPassword,
                         hintText: 'Confirm Password',

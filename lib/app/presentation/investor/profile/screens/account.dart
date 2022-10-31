@@ -36,7 +36,7 @@ class Account extends StatelessWidget {
             ),
             SizedBox(height: 40.sp),
             ListTile(
-              onTap: () => Navigator.push(context, PersonalInformation.route()),
+              onTap: () => context.push(route: PersonalInformation.route()),
               shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     color: AppColors.inputGrey,
@@ -48,7 +48,7 @@ class Account extends StatelessWidget {
             ),
             SizedBox(height: 15.sp),
             ListTile(
-              onTap: () => Navigator.push(context, AccountSettings.route()),
+              onTap: () => context.push(route: AccountSettings.route()),
               shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     color: AppColors.inputGrey,
@@ -71,6 +71,7 @@ class Account extends StatelessWidget {
             ),
             SizedBox(height: 15.sp),
             ListTile(
+              onTap: () => context.showAppDialog(content: const  LogoutDialog()),
               shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     color: AppColors.errorRed,

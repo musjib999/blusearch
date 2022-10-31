@@ -12,18 +12,8 @@ enum SnackBarStatus{
   success, error
 }
 
-extension SnackBarStatusX on SnackBarStatus{
-  bool get isSuccess => this == SnackBarStatus.success;
-  bool get isError => this == SnackBarStatus.error;
-}
-
 enum UserType{
   investor, business
-}
-
-extension UserTypeX on UserType{
-  bool get isInvestor => this == UserType.investor;
-  bool get isBusiness => this == UserType.business;
 }
 
 

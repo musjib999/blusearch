@@ -33,7 +33,7 @@ class _LoginState extends State<Login> {
                   SizedBox(height: 20.sp),
                   Column(
                     children: [
-                      AuthTextField(
+                      AppTextField(
                         controller: email,
                         hintText: 'Email Address',
                         validator: (value) {
@@ -44,7 +44,7 @@ class _LoginState extends State<Login> {
                         },
                       ),
                       const SizedBox(height: 20),
-                      AuthTextField(
+                      AppTextField(
                         obscureText: true,
                         controller: password,
                         hintText: 'Password',

@@ -60,6 +60,7 @@ class Account extends StatelessWidget {
             ),
             SizedBox(height: 15.sp),
             ListTile(
+              onTap: () => context.push(route: BankAndCardDetails.route()),
               shape: RoundedRectangleBorder(
                   side: const BorderSide(
                     color: AppColors.inputGrey,

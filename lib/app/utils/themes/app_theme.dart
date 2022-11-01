@@ -11,6 +11,9 @@ final appTheme = ThemeData(
     ),
   ),
   scaffoldBackgroundColor: AppColors.bgColor,
+  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    backgroundColor: AppColors.primaryColor,
+  ),
   appBarTheme: AppBarTheme(
     elevation: 0,
     iconTheme: const IconThemeData(color: AppColors.black),

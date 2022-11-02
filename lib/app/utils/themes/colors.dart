@@ -1,4 +1,5 @@
 import 'package:blusearch/app/configs/configs.dart';
+
 class AppColors {
   static const Color white = Colors.white;
   static const Color black = Colors.black;
@@ -11,4 +12,8 @@ class AppColors {
   static const Color purple = Color(0xff6151FA);
   static const Color niceBlue = Color(0xff268BE3);
   static const Color orange = Color(0xffFBA429);
+  static const Color inputGrey = Color(0xff787878);
+  static const Color lightGrey = Color(0xffD9D9D9);
+  static const Color faintBlue = Color(0xffD9E0FF);
+  static const Color faintGrey = Color(0xffF5F5F5);
 }

@@ -10,4 +10,14 @@ final appTheme = ThemeData(
       GoogleFonts.montserrat(fontSize: 12),
     ),
   ),
+  scaffoldBackgroundColor: AppColors.bgColor,
+  floatingActionButtonTheme: const FloatingActionButtonThemeData(
+    backgroundColor: AppColors.primaryColor,
+  ),
+  appBarTheme: AppBarTheme(
+    elevation: 0,
+    iconTheme: const IconThemeData(color: AppColors.black),
+    backgroundColor: AppColors.bgColor,
+    titleTextStyle: GoogleFonts.montserrat(fontSize: 16, fontWeight: FontWeight.w700, color: AppColors.black),
+  ),
 );

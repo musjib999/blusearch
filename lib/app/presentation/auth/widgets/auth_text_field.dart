@@ -1,21 +1,26 @@
 import '../../../configs/configs.dart';
-import '../../../utils/themes/colors.dart';
 
-class AuthTextField extends StatelessWidget {
+class AppTextField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
   final bool? obscureText;
+  final double? width;
+  final bool? enabled;
   final String? Function(String?)? validator;
-  const AuthTextField({Key? key, required this.controller, required this.hintText, this.obscureText, this.validator}) : super(key: key);
+  const AppTextField({Key? key, required this.controller, required this.hintText, this.obscureText, this.validator, this.width, this.enabled = true}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      validator: validator,
-      controller: controller,
-      obscureText: obscureText ?? false,
-      decoration: InputDecoration(
-        labelText: hintText,
+    return SizedBox(
+      width: width ?? 100.w,
+      child: TextFormField(
+        validator: validator,
+        controller: controller,
+        obscureText: obscureText ?? false,
+        enabled: enabled,
+        decoration: InputDecoration(
+          labelText: hintText,
+        ),
       ),
     );
   }

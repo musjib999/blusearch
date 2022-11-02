@@ -22,7 +22,7 @@ class _BankAndCardDetailsState extends State<BankAndCardDetails> {
         child: ListView.builder(itemCount: 1, itemBuilder: (context, index) => const CreditCard(cardNumber: '**** **** **** 1234', month: 12, year: 24)),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: ()=> context.showAppDialog(content: const AddCardDailog(),),
         child: const Icon(Icons.add),
       ),
     );

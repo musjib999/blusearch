@@ -1,7 +1,7 @@
 import 'package:blusearch/app/index.dart';
 
 class CreditCard extends StatelessWidget {
-  final String cardNumber;
+  final int cardNumber;
   final int month, year;
   const CreditCard({Key? key, required this.cardNumber, required this.month, required this.year}) : super(key: key);
 
@@ -20,7 +20,7 @@ class CreditCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(cardNumber, style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700, color: AppColors.lightGrey),),
+          Text(getLastFourDigits(cardNumber), style: GoogleFonts.montserrat(fontSize: 20, fontWeight: FontWeight.w700, color: AppColors.lightGrey),),
           SizedBox(height: 8.sp),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,7 +28,7 @@ class CreditCard extends StatelessWidget {
               Text('$month/$year', style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.lightGrey),),
               Text('Mastercard', style: GoogleFonts.montserrat(fontSize: 14, fontWeight: FontWeight.w600, color: AppColors.lightGrey),)
             ],
-          )
+          ),
         ],
       ),
     );

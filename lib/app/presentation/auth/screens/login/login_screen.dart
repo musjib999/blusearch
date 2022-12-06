@@ -78,7 +78,7 @@ class _LoginState extends State<Login> {
                         onTap: () async {
                           if (_formKey.currentState!.validate()) {
                             loginBtn.stop();
-                            Navigator.pushReplacement(context, HomeBottomNavigation.route(screens: investorMenu),);
+                            Navigator.pushReplacement(context, HomeBottomNavigation.route(screens: email.text == 'business@gmail.com' ? businessMenu : investorMenu),);
                           } else {
                             loginBtn.stop();
                           }

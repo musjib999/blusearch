@@ -6,6 +6,10 @@ class AppAsset{
   static const String business1 = 'assets/images/business1.png';
   static const String business2 = 'assets/images/business2.png';
   static const String noDataSvg = 'assets/svg/no_data.svg';
+  static const String facebook = 'assets/images/facebook.png';
+  static const String instagram = 'assets/images/instagram.png';
+  static const String twitter = 'assets/images/twitter.png';
+  static const String linkedin = 'assets/images/linkedin.png';
 }
 
 enum SnackBarStatus{

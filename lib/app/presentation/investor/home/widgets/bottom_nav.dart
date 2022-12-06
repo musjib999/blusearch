@@ -29,7 +29,32 @@ class HomeBottomNavigationState extends State<HomeBottomNavigation> {
             _selectedIndex = index;
           });
         },
-        destinations: const [
+        destinations: widget.screens != investorMenu ? const [
+          NavigationDestination(
+            icon: Icon(Ionicons.grid_outline, color: AppColors.inputGrey,),
+            selectedIcon: Icon(Ionicons.grid, color: AppColors.primaryColor,),
+            label: 'Dashboard',
+            tooltip: 'Dashboard',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.show_chart_outlined, color: AppColors.inputGrey,),
+            selectedIcon: Icon(Icons.show_chart, color: AppColors.primaryColor,),
+            label: 'Stock',
+            tooltip: 'Stock',
+          ),
+          NavigationDestination(
+            icon: Icon(Ionicons.chatbubble_ellipses, color: AppColors.inputGrey,),
+            selectedIcon: Icon(Ionicons.chatbubble_ellipses, color: AppColors.primaryColor,),
+            label: 'Chat',
+            tooltip: 'Chat',
+          ),
+          NavigationDestination(
+            icon: Icon(Ionicons.person_circle, color: AppColors.inputGrey,),
+            selectedIcon: Icon(Ionicons.person_circle, color: AppColors.primaryColor,),
+            label: 'Account',
+            tooltip: 'Account',
+          ),
+        ] : const [
           NavigationDestination(
             icon: Icon(Ionicons.compass, color: AppColors.inputGrey,),
             selectedIcon: Icon(Ionicons.compass, color: AppColors.primaryColor,),
@@ -65,4 +90,11 @@ List<Widget> investorMenu = [
   const Investments(),
   const Chat(),
   const Account(),
+];
+
+List<Widget> businessMenu = [
+  const Dashboard(),
+  const Stock(),
+  const Chat(),
+  Container()
 ];

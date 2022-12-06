@@ -3,8 +3,8 @@ import 'package:blusearch/app/index.dart';
 
 class VerifiedScreen extends StatefulWidget {
   static Route route() => MaterialPageRoute(
-    builder: (_) => const VerifiedScreen(),
-  );
+        builder: (_) => const VerifiedScreen(),
+      );
   const VerifiedScreen({Key? key}) : super(key: key);
 
   @override
@@ -12,13 +12,17 @@ class VerifiedScreen extends StatefulWidget {
 }
 
 class _VerifiedScreenState extends State<VerifiedScreen> {
+  bool hasSetup = false;
   @override
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, HomeBottomNavigation.route(screens: investorMenu));
+      setState(() {
+        hasSetup = true;
+      });
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,14 +38,34 @@ class _VerifiedScreenState extends State<VerifiedScreen> {
                   AppAsset.welcomeSvg,
                   width: 60.w,
                 ),
-                Center(
-                  child: Text(
-                    'Welcome on board!',
-                    style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.w500, fontSize: 18,
-                    ),
-                  ),
-                ),
+                hasSetup == false
+                    ? Center(
+                        child: Text(
+                          'Welcome on board!',
+                          style: GoogleFonts.montserrat(
+                            fontWeight: FontWeight.w500,
+                            fontSize: 18,
+                          ),
+                        ),
+                      )
+                    : Column(
+                        children: [
+                          Center(
+                            child: Text(
+                              'Your profile isn’t ready. Take a few minutes to set up your profile.',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.montserrat(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 18,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 20.sp),
+                          PrimaryButton2(title: 'SET PROFILE', onTap: (){
+                             Navigator.pushReplacement(context, ProfileSetupInfo.route(),);
+                          },),
+                        ],
+                      ),
               ],
             ),
             Container(

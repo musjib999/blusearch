@@ -96,5 +96,5 @@ List<Widget> businessMenu = [
   const Dashboard(),
   const Stock(),
   const Chat(),
-  Container()
+  const BusinessAccount()
 ];

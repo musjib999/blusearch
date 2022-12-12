@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:blusearch/app/index.dart';
 
 class ProfilePicture extends StatefulWidget {
@@ -8,6 +10,7 @@ class ProfilePicture extends StatefulWidget {
 }
 
 class _ProfilePictureState extends State<ProfilePicture> {
+  XFile? profilePic;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,12 +30,28 @@ class _ProfilePictureState extends State<ProfilePicture> {
         ),
         SizedBox(height: 30.sp),
         GestureDetector(
-          onTap: () {},
+          onTap: () async {
+            final image =
+                await mediaService.pickImage(source: ImageSource.gallery);
+            setState(() {
+              profilePic = image;
+            });
+          },
           child: Stack(
             children: [
-              const Center(
-                  child: CircleAvatar(
-                      backgroundColor: AppColors.lightGrey, radius: 65),
+              Center(
+                child: profilePic == null
+                    ? const CircleAvatar(
+                        backgroundColor: AppColors.lightGrey,
+                        radius: 65,
+                      )
+                    : CircleAvatar(
+                        backgroundColor: AppColors.lightGrey,
+                        radius: 65,
+                        backgroundImage: FileImage(
+                          File(profilePic!.path),
+                        ),
+                      ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 73.sp, left: 51.5.w),
@@ -43,15 +62,15 @@ class _ProfilePictureState extends State<ProfilePicture> {
         ),
         SizedBox(height: 50.sp),
         Center(
-            child: PrimaryButton2(
-                title: 'Next',
-                onTap: () {
-                  pageController.nextPage(
-                      duration: const Duration(milliseconds: 500),
-                      curve: Curves.linear,
-                  );
-                },
-            ),
+          child: PrimaryButton2(
+            title: 'Next',
+            onTap: () {
+              pageController.nextPage(
+                duration: const Duration(milliseconds: 500),
+                curve: Curves.linear,
+              );
+            },
+          ),
         ),
         SizedBox(height: 20.h),
         Center(

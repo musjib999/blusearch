@@ -10,6 +10,7 @@ class AppAsset{
   static const String instagram = 'assets/images/instagram.png';
   static const String twitter = 'assets/images/twitter.png';
   static const String linkedin = 'assets/images/linkedin.png';
+  static const String cancel = 'assets/svg/cancel.svg';
 }
 
 enum SnackBarStatus{

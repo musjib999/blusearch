@@ -7,8 +7,9 @@ class AppTextField extends StatelessWidget {
   final double? width;
   final bool? enabled;
   final int? maxLines;
+  final IconData? suffixIcon;
   final String? Function(String?)? validator;
-  const AppTextField({Key? key, required this.controller, required this.hintText, this.obscureText, this.validator, this.width, this.enabled = true, this.maxLines}) : super(key: key);
+  const AppTextField({Key? key, required this.controller, required this.hintText, this.obscureText, this.validator, this.width, this.enabled = true, this.maxLines, this.suffixIcon}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +22,7 @@ class AppTextField extends StatelessWidget {
         enabled: enabled,
         decoration: InputDecoration(
           labelText: hintText,
+          suffixIcon: Icon(suffixIcon),
         ),
       ),
     );

@@ -4,3 +4,4 @@ export 'data/data.dart';
 export 'core/core.dart';
 export 'configs/configs.dart';
 export 'package:flutter/material.dart';
+export 'package:image_picker/image_picker.dart';

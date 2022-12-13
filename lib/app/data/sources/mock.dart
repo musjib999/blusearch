@@ -171,4 +171,6 @@ class MockData {
       sent: true,
     ),
   ];
+  static BusinessModel currentBusiness = BusinessModel(name: 'Faidu Cakes ‘N’ Delicacies', email: 'faithdanieloluwafemi@gmail.com', image: AppAsset.business1);
+  static StockModel? stock;
 }
